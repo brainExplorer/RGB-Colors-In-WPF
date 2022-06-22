@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="473" Width="800" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-13">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFE07979" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Canvas Background="#FFD0ADA0" Margin="0,0,0,130">
+            <StackPanel Height="228" Canvas.Left="33" Canvas.Top="63" Width="365" Background="AliceBlue" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label Name="lbRed" Height="43" Width="243" FontSize="24" Margin="10,30,10,10" Background="#FFBFB3A4" MouseDoubleClick="lbRed_MouseDoubleClick"/>
+                <Label Name="lbGreen" Height="43" Width="243" FontSize="24" Margin="5" Background="#FFBFB3A4" MouseDoubleClick="lbGreen_MouseDoubleClick"/>
+                <Label Name="lbBlue" Height="43" Width="243" FontSize="24" Margin="10" Background="#FFBFB3A4" MouseDoubleClick="lbBlue_MouseDoubleClick"/>
+            </StackPanel>
+            <StackPanel Height="228" Canvas.Left="408" Canvas.Top="63" Width="365" Background="AliceBlue" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Label x:Name="lbColorPicker" Height="91" Width="245" Background="White" Margin="35"/>
+                <TextBlock x:Name="tbRGBvalues" Background="White" TextAlignment="Center" Width="120" Height="30" Margin="0,-50" FontSize="24" FontWeight="Bold"/>
+            </StackPanel>
+            <TextBox Canvas.Left="0" Canvas.Top="0" Width="800" Background="#FFBBF79B" Height="45" FontSize="20" FontWeight="Bold" TextAlignment="Center" Text="RGB Values And Their Affect On Each Others" IsEnabled="False" />
+        </Canvas>
+        <Button x:Name="btnRed" Content="Button" HorizontalAlignment="Left" Margin="39,348,0,27" Width="223" Background="Red" FontSize="24" FontWeight="Bold" Foreground="White" Click="btnRed_Click"/>
+        <Button x:Name="btnGreen" Content="Button" HorizontalAlignment="Left" Margin="291,348,0,27" Width="223" Background="Lime" FontSize="24" FontWeight="Bold" Foreground="White" Click="btnGreen_Click"/>
+        <Button x:Name="btnBlue" Content="Button" HorizontalAlignment="Left" Margin="542,348,0,27" Width="223" Background="Blue" FontSize="24" FontWeight="Bold" Foreground="White" Click="btnBlue_Click"/>
+
+    </Grid>
+</Window>
